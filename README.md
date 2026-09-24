@@ -50,9 +50,6 @@ ars-taty/
 * **CSS3** (Flexbox, CSS Grid, Media Queries, плавные переходы)
 * **JavaScript (ES6+)** (Vanilla JS, делегирование событий, Base64-декодирование)
 
-## 🌐 Развертывание на GitHub Pages
+## 🔗 Ссылка на сайт
 
-1. Загрузите проект в репозиторий на GitHub.
-2. Откройте **Settings** -> **Pages**.
-3. В графе **Build and deployment** выберите **Deploy from a branch**.
-4. Укажите ветку `main` (или `master`), каталог `/ (root)` и нажмите **Save**.
+Проект доступен онлайн: **[ars-tattoo.ru](https://ars-tattoo.ru)**
