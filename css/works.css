@@ -1,0 +1,170 @@
+/* ==========================================================================
+   СПЕЦИФИЧНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ "РАБОТЫ" (works.html)
+   Используются поверх reset.css и style.css
+   ========================================================================== */
+
+/* 1. Секция Hero / Заголовок страницы */
+.works-hero {
+  padding: 85px 0 65px;
+  background-color: #1c1c1c;
+  text-align: center;
+}
+
+.works-hero__title {
+  font-family: "Cormorant", serif;
+  font-size: 54px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.works-hero__text {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.65;
+  color: #bbbbbb;
+}
+
+/* 2. Основная секция галереи */
+.works-section {
+  padding: 60px 0 110px;
+  background-color: #111111;
+}
+
+/* Сетка карточек (CSS Grid) */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Карточка работы */
+.works-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 4; 
+  cursor: pointer;
+  background-color: #202020;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.works-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.works-card:hover .works-card__img {
+  transform: scale(1.06);
+}
+
+/* 3. Секция призыва к действию (CTA) */
+.works-cta {
+  padding: 95px 0;
+  background-color: #1c1c1c;
+  text-align: center;
+  /* border-top: 1px solid #262626; */
+}
+
+.works-cta__title {
+  font-family: "Cormorant", serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.works-cta__text {
+  max-width: 620px;
+  margin: 0 auto 36px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #aaaaaa;
+}
+
+.works-cta__btn {
+  display: inline-block;
+  padding: 14px 44px;
+  border: 1px solid #E58E26;
+  color: #E58E26;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.works-cta__btn:hover {
+  background-color: #E58E26;
+  color: #111111;
+}
+
+/* 4. Адаптивность для мобильных устройств */
+@media (max-width: 916px) {
+  .works-hero__title {
+    font-size: 44px;
+  }
+  .works-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .works-hero {
+    padding: 60px 0 45px;
+  }
+
+  .works-hero__title {
+    font-size: 38px;
+  }
+
+  .works-hero__text {
+    font-size: 16px;
+  }
+
+  .works-section {
+    padding: 45px 0 80px;
+  }
+
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .works-cta {
+    padding: 70px 0;
+  }
+
+  .works-cta__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .works-hero__title {
+    font-size: 30px;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .works-cta__title {
+    font-size: 26px;
+  }
+
+  .works-cta__text {
+    font-size: 15px;
+  }
+
+  .works-cta__btn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}

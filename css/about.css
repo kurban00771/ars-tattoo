@@ -1,0 +1,386 @@
+/* ==========================================================================
+   СТИЛИ СТРАНИЦЫ "О МАСТЕРЕ" (about/index.html)
+   ========================================================================== */
+
+/* 1. Hero страницы */
+.about-hero {
+  padding: 85px 0 65px;
+  background-color: #181818;
+  text-align: center;
+}
+
+.about-hero__title {
+  font-family: "Cormorant", serif;
+  font-size: 54px;
+  font-weight: 400;
+  color: #eee;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.about-hero__text {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.65;
+  color: #bbbbbb;
+}
+
+/* 2. Секция биографии и подхода (2 колонки) */
+.about-story {
+  padding: 100px 0;
+  background-color: #111111;
+}
+
+.about-story__inner {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-story__visual {
+  position: relative;
+}
+
+.about-story__img-wrap {
+  aspect-ratio: 4 / 5;
+  background-color: #202020;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+  border: 1px solid #282828;
+  overflow: hidden;
+}
+
+.about-story__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-story__badge {
+  position: absolute;
+  bottom: -25px;
+  right: -20px;
+  background-color: #1c1c1c;
+  border: 1px solid #E58E26;
+  padding: 16px 22px;
+  max-width: 220px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.about-story__badge-num {
+  display: block;
+  font-family: "Cormorant", serif;
+  font-size: 32px;
+  color: #E58E26;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.about-story__badge-desc {
+  font-size: 12px;
+  color: #aaa;
+  line-height: 1.4;
+  display: block;
+}
+
+.about-story__subtitle {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #E58E26;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.about-story__title {
+  font-family: "Cormorant", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #eee;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.about-story__text {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.about-story__text p + p {
+  margin-top: 16px;
+}
+
+.about-story__quote {
+  margin: 30px 0;
+  padding: 18px 24px;
+  border-left: 2px solid #E58E26;
+  background-color: #191919;
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+  font-style: italic;
+  color: #eee;
+  line-height: 1.5;
+}
+
+.about-story__meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.about-tag {
+  font-size: 13px;
+  padding: 6px 14px;
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: #ccc;
+  letter-spacing: 0.5px;
+}
+
+/* 3. Секция принципов */
+.about-principles {
+  padding: 110px 0;
+  background-color: #161616;
+  border-top: 1px solid #242424;
+  border-bottom: 1px solid #242424;
+}
+
+.about-principles__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.about-principle-card {
+  background-color: #1f1f1f;
+  border: 1px solid #292929;
+  padding: 38px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about-principle-card__num {
+  font-family: "Cormorant", serif;
+  font-size: 32px;
+  color: #E58E26;
+  margin-bottom: 16px;
+}
+
+.about-principle-card__title {
+  font-family: "Cormorant", serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #eee;
+  margin-bottom: 14px;
+}
+
+.about-principle-card__text {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #999;
+}
+
+/* 4. Секция студии и атмосферы */
+.about-studio {
+  padding: 105px 0;
+  background-color: #111111;
+}
+
+.about-studio__inner {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-studio__subtitle {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #E58E26;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.about-studio__title {
+  font-family: "Cormorant", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #eee;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.about-studio__text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #aaa;
+  margin-bottom: 26px;
+}
+
+.about-studio__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.about-studio__list li {
+  font-size: 15px;
+  color: #888;
+  position: relative;
+  padding-left: 22px;
+  line-height: 1.5;
+}
+
+.about-studio__list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #E58E26;
+  font-weight: 600;
+}
+
+.about-studio__visual {
+  aspect-ratio: 4 / 3;
+  background-color: #202020;
+  border: 1px solid #282828;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-studio__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 5. CTA Блок */
+.about-cta {
+  padding: 95px 0;
+  background-color: #181818;
+  text-align: center;
+  border-top: 1px solid #242424;
+}
+
+.about-cta__title {
+  font-family: "Cormorant", serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #eee;
+  margin-bottom: 16px;
+}
+
+.about-cta__text {
+  max-width: 620px;
+  margin: 0 auto 36px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #aaaaaa;
+}
+
+.about-cta__btn {
+  display: inline-block;
+  padding: 14px 44px;
+  background-color: #E58E26;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.about-cta__btn:hover {
+  background-color: #f39c12;
+  transform: translateY(-2px);
+}
+
+/* Ховер карточек только для мыши */
+@media (hover: hover) and (pointer: fine) {
+  .about-principle-card:hover {
+    transform: translateY(-6px);
+    border-color: #E58E26;
+  }
+}
+
+/* 6. Адаптивность под планшеты и смартфоны */
+@media (max-width: 1024px) {
+  .about-story__inner {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-story__img-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .about-story__badge {
+    right: 20px;
+  }
+
+  .about-principles__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-studio__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-studio__visual {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 60px 0 40px;
+  }
+
+  .about-hero__title {
+    font-size: 38px;
+  }
+
+  .about-hero__text {
+    font-size: 16px;
+  }
+
+  .about-story,
+  .about-principles,
+  .about-studio {
+    padding: 60px 0;
+  }
+
+  .about-story__title,
+  .about-studio__title {
+    font-size: 28px;
+  }
+
+  .about-story__badge {
+    position: static;
+    margin-top: 15px;
+    max-width: 100%;
+  }
+
+  .about-cta__title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-principles__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-cta__btn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+}
