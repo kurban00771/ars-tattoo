@@ -148,3 +148,62 @@ document.addEventListener('click', (e) => {
         if (typeof ym === 'function') ym(METRIKA_ID, 'reachGoal', 'click_phone');
     }
 });
+
+// 9. Плавное уведомление о Cookie (с защитой для всех браузеров и iOS/Android)
+(function () {
+    let isAccepted = false;
+    try {
+        isAccepted = localStorage.getItem('ars_cookie_accepted') === 'true';
+    } catch (e) {
+        isAccepted = false;
+    }
+
+    if (isAccepted) return;
+
+    const cookieBanner = document.createElement('div');
+    cookieBanner.className = 'cookie-notice';
+    cookieBanner.setAttribute('role', 'region');
+    cookieBanner.setAttribute('aria-label', 'Уведомление об использовании cookie');
+    cookieBanner.innerHTML = `
+        <p class="cookie-notice__text">
+            Мы используем файлы cookie для удобства работы сайта и аналитики.
+        </p>
+        <button type="button" class="cookie-notice__btn">Соглашаюсь</button>
+    `;
+    document.body.appendChild(cookieBanner);
+
+    let isVisible = false;
+    let timerId = null;
+
+    const showBanner = () => {
+        if (isVisible) return;
+        isVisible = true;
+        cookieBanner.classList.add('cookie-notice--visible');
+        window.removeEventListener('scroll', onScrollTrigger);
+        if (timerId) clearTimeout(timerId);
+    };
+
+    const onScrollTrigger = () => {
+        const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrolled > 180) {
+            showBanner();
+        }
+    };
+
+    // Показываем при прокрутке на 180px вниз ИЛИ через 3.5 секунды
+    window.addEventListener('scroll', onScrollTrigger, { passive: true });
+    timerId = setTimeout(showBanner, 3500);
+
+    // Нажатие на кнопку "Соглашаюсь"
+    const acceptBtn = cookieBanner.querySelector('.cookie-notice__btn');
+    acceptBtn.addEventListener('click', () => {
+        try {
+            localStorage.setItem('ars_cookie_accepted', 'true');
+        } catch (e) {}
+
+        cookieBanner.classList.remove('cookie-notice--visible');
+        setTimeout(() => {
+            cookieBanner.remove();
+        }, 450);
+    });
+})();
